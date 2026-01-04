@@ -13,7 +13,7 @@ export default function Navigation() {
             <a href="/" className="hover:text-amber-900 font-medium transition-colors text-sm uppercase tracking-wide">Home</a>
             <a href="/services" className="hover:text-amber-900 font-medium transition-colors text-sm uppercase tracking-wide">Services</a>
             <a href="/about" className="hover:text-amber-900 font-medium transition-colors text-sm uppercase tracking-wide">About</a>
-            <a href="#contact" className="hover:text-amber-900 font-medium transition-colors text-sm uppercase tracking-wide">Contact</a>
+            <a href="/contact" className="hover:text-amber-900 font-medium transition-colors text-sm uppercase tracking-wide">Contact</a>
             <a href="/book" className="bg-amber-900 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-amber-800 transition-colors text-sm uppercase tracking-wide">Book Now</a>
         </div>
         
