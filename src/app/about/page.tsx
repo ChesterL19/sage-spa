@@ -1,7 +1,6 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
   return (
@@ -39,7 +38,7 @@ export default function About() {
               {/* Nature accent */}
               <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-emerald-100/50 rounded-full blur-2xl"></div>
             </div>
-            
+
             {/* Two Smaller Images - Asymmetric */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="relative h-[350px] rounded-[60px] overflow-hidden lg:-mt-20">
@@ -74,13 +73,22 @@ export default function About() {
             </div>
             <div className="ml-6 space-y-8">
               <p className="text-stone-700 leading-relaxed text-lg lg:text-xl font-light">
-                Welcome to Sage Spa, where tranquility meets transformation. Nestled in the heart of Calgary, we are dedicated to providing you with an unparalleled wellness experience that nurtures both body and soul.
+                Welcome to Sage Spa, where tranquility meets transformation.
+                Nestled in the heart of Calgary, we are dedicated to providing
+                you with an unparalleled wellness experience that nurtures both
+                body and soul.
               </p>
               <p className="text-stone-700 leading-relaxed text-lg lg:text-xl font-light">
-                Our team of skilled therapists combines ancient healing traditions with modern techniques to create personalized treatments that restore balance, rejuvenate your spirit, and leave you feeling refreshed and renewed.
+                Our team of skilled therapists combines ancient healing
+                traditions with modern techniques to create personalized
+                treatments that restore balance, rejuvenate your spirit, and
+                leave you feeling refreshed and renewed.
               </p>
               <p className="text-stone-700 leading-relaxed text-lg lg:text-xl font-light">
-                Inspired by the natural world around us, every treatment room is designed to bring the outdoors in, with organic textures, natural light, and calming earth tones that create a sanctuary for your wellness journey.
+                Inspired by the natural world around us, every treatment room is
+                designed to bring the outdoors in, with organic textures,
+                natural light, and calming earth tones that create a sanctuary
+                for your wellness journey.
               </p>
             </div>
             {/* Organic shape accent */}
@@ -95,10 +103,15 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-stone-700 leading-relaxed text-xl lg:text-2xl font-light mb-8">
-                At Sage Spa, we believe that self-care is not a luxury—it&apos;s a necessity. Every visit is designed to be a sanctuary where you can escape the stresses of daily life and reconnect with your inner peace.
+                At Sage Spa, we believe that self-care is not a luxury—it&apos;s
+                a necessity. Every visit is designed to be a sanctuary where you
+                can escape the stresses of daily life and reconnect with your
+                inner peace.
               </p>
               <p className="text-stone-700 leading-relaxed text-lg font-light">
-                We draw inspiration from nature&apos;s healing power, using only the purest botanical ingredients and time-honored techniques that honor both your body and the earth.
+                We draw inspiration from nature&apos;s healing power, using only
+                the purest botanical ingredients and time-honored techniques
+                that honor both your body and the earth.
               </p>
             </div>
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-100/30 rounded-full blur-2xl"></div>
@@ -112,32 +125,41 @@ export default function About() {
               </h2>
               <div className="w-32 h-px bg-stone-300 mx-auto"></div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 ">
               <div className="relative text-center p-8 rounded-[40px] bg-white/50 backdrop-blur-sm border border-stone-300 shadow-lg">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-emerald-500/80 rounded-full blur-md"></div>
-                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">Natural</h3>
+                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">
+                  Natural
+                </h3>
                 <div className="w-16 h-0.5 bg-emerald-400 mx-auto mb-6"></div>
                 <p className="text-stone-600 font-light leading-relaxed text-base lg:text-lg">
-                  We use only the finest natural and organic products in all our treatments, honoring the earth&apos;s gifts.
+                  We use only the finest natural and organic products in all our
+                  treatments, honoring the earth&apos;s gifts.
                 </p>
               </div>
-              
+
               <div className="relative text-center p-8 rounded-[40px] bg-white/50 backdrop-blur-sm border border-stone-300 shadow-lg">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-amber-500/90 rounded-full blur-md"></div>
-                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">Holistic</h3>
+                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">
+                  Holistic
+                </h3>
                 <div className="w-16 h-0.5 bg-amber-400 mx-auto mb-6"></div>
                 <p className="text-stone-600 font-light leading-relaxed text-base lg:text-lg">
-                  Our approach addresses your complete well-being—body, mind, and spirit—as interconnected elements.
+                  Our approach addresses your complete well-being—body, mind,
+                  and spirit—as interconnected elements.
                 </p>
               </div>
-              
+
               <div className="relative text-center p-8 rounded-[40px] bg-white/50 backdrop-blur-sm border border-stone-300 shadow-lg">
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-red-600/90 rounded-full blur-md"></div>
-                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">Caring</h3>
+                <h3 className="text-3xl lg:text-4xl font-serif text-stone-800 font-light mb-6 mt-4">
+                  Caring
+                </h3>
                 <div className="w-16 h-0.5 bg-red-400 mx-auto mb-6"></div>
                 <p className="text-stone-600 font-light leading-relaxed text-base lg:text-lg">
-                  Every guest receives personalized attention and care tailored to their unique needs and journey.
+                  Every guest receives personalized attention and care tailored
+                  to their unique needs and journey.
                 </p>
               </div>
             </div>
@@ -155,10 +177,14 @@ export default function About() {
                   </h2>
                 </div>
                 <p className="text-stone-700 leading-relaxed text-lg font-light ml-4">
-                  We believe wellness is a journey, not a destination. Each treatment is thoughtfully crafted to honor your body&apos;s natural rhythms and restore harmony within.
+                  We believe wellness is a journey, not a destination. Each
+                  treatment is thoughtfully crafted to honor your body&apos;s
+                  natural rhythms and restore harmony within.
                 </p>
                 <p className="text-stone-700 leading-relaxed text-lg font-light ml-4">
-                  Like the sage plant that gives us our name, we aim to bring wisdom, clarity, and healing to every moment you spend with us.
+                  Like the sage plant that gives us our name, we aim to bring
+                  wisdom, clarity, and healing to every moment you spend with
+                  us.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-[60px] overflow-hidden">
@@ -168,18 +194,15 @@ export default function About() {
                   fill
                   className="object-cover"
                 />
-                
+
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-emerald-100/50 rounded-full blur-2xl"></div>
               </div>
             </div>
             <div className="absolute -right-16 bottom-0 w-48 h-48 bg-amber-100/30 rounded-full blur-3xl hidden lg:block"></div>
           </div>
-
-
         </div>
       </section>
       <Footer />
     </main>
   );
 }
-

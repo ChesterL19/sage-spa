@@ -13,7 +13,7 @@ export default function Contact() {
   const [emailError, setEmailError] = useState("");
 
   const formatPhoneNumber = (value: string) => {
-    const digits = value.replace(/\D/g, '');
+    const digits = value.replace(/\D/g, "");
     const limitedDigits = digits.slice(0, 10);
     if (limitedDigits.length <= 3) {
       return limitedDigits;
@@ -65,7 +65,7 @@ export default function Contact() {
             {/* Nature accents */}
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-emerald-100/50 rounded-full blur-2xl hidden lg:block"></div>
             <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-amber-100/40 rounded-full blur-2xl hidden lg:block"></div>
-            
+
             <div className="relative bg-white/70 backdrop-blur-sm rounded-[60px] p-8 lg:p-12 shadow-xl border border-stone-200/50">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                 {/* Left Column - Contact Form */}
@@ -76,7 +76,7 @@ export default function Contact() {
                       Send us a Message
                     </label>
                   </div>
-                  
+
                   <div className="space-y-5">
                     <div>
                       <input
@@ -112,7 +112,9 @@ export default function Contact() {
                         }`}
                       />
                       {emailError && (
-                        <p className="text-red-500 text-xs mt-2 ml-2">{emailError}</p>
+                        <p className="text-red-500 text-xs mt-2 ml-2">
+                          {emailError}
+                        </p>
                       )}
                     </div>
                     <div>
@@ -120,7 +122,9 @@ export default function Contact() {
                         type="tel"
                         placeholder="Phone Number *"
                         value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(formatPhoneNumber(e.target.value))}
+                        onChange={(e) =>
+                          setPhoneNumber(formatPhoneNumber(e.target.value))
+                        }
                         maxLength={12}
                         required
                         className="w-full p-5 rounded-[30px] bg-white/90 text-stone-700 border border-stone-200 focus:border-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-300/50 transition-all placeholder:text-stone-400"
@@ -143,9 +147,19 @@ export default function Contact() {
                     <div className="pt-4">
                       <button
                         type="submit"
-                        disabled={!fullName || !email || !phoneNumber || !message || !!emailError}
+                        disabled={
+                          !fullName ||
+                          !email ||
+                          !phoneNumber ||
+                          !message ||
+                          !!emailError
+                        }
                         className={`w-full px-12 py-5 rounded-[30px] text-sm uppercase tracking-wider font-medium transition-all shadow-lg ${
-                          fullName && email && phoneNumber && message && !emailError
+                          fullName &&
+                          email &&
+                          phoneNumber &&
+                          message &&
+                          !emailError
                             ? "bg-stone-800 text-white hover:bg-stone-700 hover:shadow-xl cursor-pointer"
                             : "bg-stone-300 text-stone-500 cursor-not-allowed"
                         }`}
@@ -164,33 +178,49 @@ export default function Contact() {
                       Get in Touch
                     </label>
                   </div>
-                  
+
                   <div className="space-y-10">
                     <div>
-                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">Phone</h3>
-                      <a href="tel:4034567890" className="text-stone-800 text-lg font-light hover:text-stone-600 transition-colors">
+                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">
+                        Phone
+                      </h3>
+                      <a
+                        href="tel:4034567890"
+                        className="text-stone-800 text-lg font-light hover:text-stone-600 transition-colors"
+                      >
                         403 456 7890
                       </a>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">Email</h3>
-                      <a href="mailto:info@sagespa.com" className="text-stone-800 text-lg font-light hover:text-stone-600 transition-colors">
+                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">
+                        Email
+                      </h3>
+                      <a
+                        href="mailto:info@sagespa.com"
+                        className="text-stone-800 text-lg font-light hover:text-stone-600 transition-colors"
+                      >
                         info@sagespa.com
                       </a>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">Address</h3>
+                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">
+                        Address
+                      </h3>
                       <p className="text-stone-800 text-lg font-light leading-relaxed">
-                        123 Main St<br />
-                        Calgary, Alberta<br />
+                        123 Main St
+                        <br />
+                        Calgary, Alberta
+                        <br />
                         Canada
                       </p>
                     </div>
-                    
+
                     <div>
-                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">Hours</h3>
+                      <h3 className="text-stone-400 text-xs uppercase tracking-widest block mb-3">
+                        Hours
+                      </h3>
                       <div className="space-y-2 text-stone-800 text-lg font-light">
                         <p>Mon - Fri: 9am - 8pm</p>
                         <p>Saturday: 10am - 6pm</p>
@@ -205,7 +235,10 @@ export default function Contact() {
 
           {/* Back to Home Link */}
           <div className="text-center mt-16">
-            <Link href="/" className="text-stone-500 hover:text-stone-800 font-light transition-colors inline-flex items-center gap-2">
+            <Link
+              href="/"
+              className="text-stone-500 hover:text-stone-800 font-light transition-colors inline-flex items-center gap-2"
+            >
               <span className="text-xl">←</span>
               <span>Back to Home</span>
             </Link>
@@ -216,4 +249,3 @@ export default function Contact() {
     </main>
   );
 }
-
