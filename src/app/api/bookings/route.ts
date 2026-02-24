@@ -1,8 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 export async function POST(request: NextRequest) {
   try {
+    if (
+      !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+      !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    ) {
+      return NextResponse.json(
+        { error: "Server configuration error" },
+        { status: 503 }
+      );
+    }
     const body = await request.json();
     const {
       fullName,
@@ -32,6 +41,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const supabase = getSupabase();
     const { error } = await supabase.from("bookings").insert({
       full_name,
       phone: phoneNumber,
